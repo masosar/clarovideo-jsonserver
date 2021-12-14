@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: #000;
+    height: 100vh;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: rgb(27, 25, 25);
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    background-color: rgb(27, 25, 25);
+}
+
+.clarovideo-header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clarovideo-grid {
+    padding: 30px 20px;
+}
+
+.clarovideo-footer {
+    min-height: 100px;
+    padding: 30px 20px;
+}
+
+.clarovideo-footer-content {
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clarovideo-wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 290px);
+    grid-gap: 15px;
+    justify-content: center;
+  }
+
+  
+.clarovideo-vertical-wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 163px);
+    grid-gap: 15px;
+    justify-content: center;
+  }
+  
+  .clarovideo-card-container {
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    width: 290px;
+    height: 163px;
+  }
+
+  .clarovideo-vertical-card-container {
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    width: 163px;
+    height: 245px;
+  }
+  
+  .clarovideo-banner-img {
+    width: 290px;
+    height: 163px;
+    cursor: pointer;
+  }
+  
+  .clarovideo-vertical-banner-img {
+    width: 163px;
+    height: 245px;
+    cursor: pointer;
+  }
+
+  /* Detalle */
+  .clarovideo-wrapper-detail {
+    display: grid;
+    grid-gap: 15px;
+  }
+
+  .clarovideo-detail-title {
+      font-size: 2rem;
+  }
+
+  .clarovideo-detail-content {
+      display: flex;
+      column-gap: 15px;
+  }
+
+  .clarovideo-detail-content-data ul {
+    list-style-type: none;
+  }
+
+  .title-original {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Búsqueda --> */
+
+.menunav--buscar {
+    padding: 0 25px 0 200px;
+    /* Padding for other horizontal elements */
+}
+
+.buscar--wrapper {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent;
+    margin: 0;
+    position: static;
+}
+
+.buscar--form {
+    overflow: hidden;
+    position: relative;
+}
+
+.buscar--input-wrapper {
+    padding: 0 66px 0 0;
+    /* Right padding for submit button width */
+    overflow: hidden;
+}
+
+.buscar--input {
+    width: 100%;
+}
+
+/* Búsqueda configurables --> */
+
+.buscar--input {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 30px;
+    padding: 0 46px 0 10px;
+    border-color: #E7171C;
+    border-radius: 20px;
+    background-color: rgb(27, 25, 25);
+    /* (height/2) + border-width */
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 15px;
+    color: #fff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.buscar--input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.buscar--input:focus.buscar--submit {
+    color: #fff;
+}
+
+/* .buscar--submit:hover {
+    color: #333;
+    cursor: pointer;
+} */
+
+::-webkit-input-placeholder {
+    color: #888;
+}
+
+input:-moz-placeholder {
+    color: #888
+}

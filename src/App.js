@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import ClaroList from "./components/ClaroList";
+import ClaroListVert from "./components/ClaroListVert";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import MovieDetail from "./components/MovieDetail";
 
 function App() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 955px)",
+  });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 955px)" });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="clarovideo-container">
+        <nav>
+          <Header />
+        </nav>
+        <main className="clarovideo-grid">
+          <Switch>
+            <Route exact path="/">
+              {isDesktopOrLaptop && <ClaroList />}
+              {isTabletOrMobile && <ClaroListVert />}
+            </Route>
+            <Route path="/detail/:id" component={MovieDetail}>
+              {/* <MovieDetail /> */}
+            </Route>
+          </Switch>
+        </main>
+        <footer className="clarovideo-footer">
+          <Footer />
+        </footer>
+      </div>
+    </Router>
   );
 }
 
